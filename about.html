@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>關於好宅研究所｜軟裝設計 × 包租代管 × 租管法規</title>
+  <meta name="description" content="好宅研究所是專注軟裝設計、包租代管與台灣租賃法規的實用知識平台，幫房東與租客都住得更好、管得更省心。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="site-logo">
+      <div class="logo-icon">宅</div>
+      好宅研究所<span class="accent">．</span>
+    </a>
+    <button class="nav-toggle" aria-label="開啟選單" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html">首頁</a>
+      <a href="articles.html">所有文章</a>
+      <a href="about.html" class="active">關於</a>
+      <a href="contact.html" class="nav-cta">諮詢包租代管</a>
+    </nav>
+  </div>
+</header>
+
+<div class="article-header">
+  <div class="container--narrow">
+    <div class="article-cat">關於本站</div>
+    <h1>好宅研究所是什麼？</h1>
+    <div class="article-meta">一個關於「住」的實用知識平台</div>
+  </div>
+</div>
+
+<main class="article-body">
+  <div class="container--narrow">
+
+    <p>你好，我是好宅研究員。</p>
+
+    <p>開始寫這個部落格，是因為我一直覺得，台灣關於「租屋」這件事，有太多資訊是片段的、過時的，或是寫給專業人士看的——對一般房東或租客來說，實在太難用。</p>
+
+    <p>好宅研究所想做的事很簡單：<strong>把複雜的事說得清楚，把可以做的事說得具體</strong>。</p>
+
+    <h2>這裡寫什麼</h2>
+
+    <p>主要涵蓋三個主題：</p>
+
+    <blockquote>
+      <strong>軟裝設計</strong>：不是教你花大錢裝修，而是用對的方法、合理的預算，讓你的空間有溫度、有質感、讓人想住。
+    </blockquote>
+
+    <blockquote>
+      <strong>包租代管</strong>：什麼是包租代管、怎麼選業者、費用怎麼算、委託前要問什麼——從房東的角度，把這件事說清楚。
+    </blockquote>
+
+    <blockquote>
+      <strong>租管法規</strong>：台灣租賃法規常常在更新，房東如果沒跟上，租約可能就有漏洞。這裡會定期整理最新的法規重點，每篇都標注資料來源與更新日期。
+    </blockquote>
+
+    <h2>關於包租代管服務</h2>
+
+    <p>除了內容經營，我也提供包租代管的諮詢與服務。如果你有房子想委託出租管理，歡迎直接聯絡我，我們可以先聊聊你的狀況，再決定是否適合合作。</p>
+
+    <div class="cta-box">
+      <h3>有房子想委託管理？</h3>
+      <p>不需要先做任何功課，把你的問題告訴我，我來幫你分析適不適合包租代管。</p>
+      <a href="contact.html" class="btn btn--gold">預約免費諮詢</a>
+    </div>
+
+    <h2>更新頻率</h2>
+    <p>每週二早上發布一篇文章。如果你不想錯過，最簡單的方式是訂閱電子報，我會在文章發布的同一天寄到你的信箱。</p>
+
+  </div>
+</main>
+
+<section class="subscribe-strip">
+  <div class="container--narrow">
+    <h2>每週一篇，直接送到你信箱</h2>
+    <p>軟裝靈感、法規更新、包租代管實戰筆記</p>
+    <form class="subscribe-form" onsubmit="handleSubscribe(event)">
+      <input type="email" placeholder="你的 Email 地址" required>
+      <button type="submit" class="btn btn--gold">免費訂閱</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="site-logo" style="margin-bottom:.8rem; display:inline-flex;">
+          <div class="logo-icon">宅</div>
+          好宅研究所<span class="accent">．</span>
+        </a>
+        <p>軟裝設計 × 包租代管 × 租管法規<br>幫你住得美、管得省心</p>
+      </div>
+      <div class="footer-col">
+        <h4>文章分類</h4>
+        <ul>
+          <li><a href="category-soft-decor.html">軟裝設計</a></li>
+          <li><a href="category-rental-mgmt.html">包租代管</a></li>
+          <li><a href="category-law.html">租管法規</a></li>
+          <li><a href="category-space.html">空間設計</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>關於本站</h4>
+        <ul>
+          <li><a href="about.html">關於好宅研究所</a></li>
+          <li><a href="contact.html">諮詢包租代管</a></li>
+          <li><a href="privacy.html">隱私權政策</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 好宅研究所 · 內容僅供參考，不構成法律或投資建議</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleNav() { document.getElementById('siteNav').classList.toggle('open'); }
+function handleSubscribe(e) { e.preventDefault(); alert('感謝訂閱！'); }
+</script>
+</body>
+</html>

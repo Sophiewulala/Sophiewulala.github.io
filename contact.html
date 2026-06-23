@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>諮詢包租代管服務｜好宅研究所</title>
+  <meta name="description" content="有房子想委託出租管理？歡迎聯絡好宅研究所，預約免費諮詢，討論是否適合包租代管服務。">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .contact-form-wrap {
+      background: var(--c-white); border-radius: var(--radius);
+      padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,.07);
+    }
+    .form-group { margin-bottom: 1.5rem; }
+    .form-group label {
+      display: block; font-family: var(--f-title); font-size: .9375rem;
+      font-weight: 700; color: var(--c-charcoal); margin-bottom: .5rem;
+    }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%; padding: .75rem 1rem; border-radius: var(--radius);
+      border: 1.5px solid var(--c-border); font-size: 1rem;
+      font-family: var(--f-body); background: var(--c-cream);
+      color: var(--c-text); transition: border-color .2s;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+      outline: none; border-color: var(--c-gold);
+      background: var(--c-white);
+    }
+    .form-group textarea { min-height: 120px; resize: vertical; }
+    .form-hint { font-size: .8125rem; color: var(--c-muted); margin-top: .3rem; font-family: var(--f-title); }
+    .faq-item { border-bottom: 1px solid var(--c-border); padding: 1.25rem 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-family: var(--f-title); font-weight: 700; color: var(--c-charcoal); margin-bottom: .5rem; }
+    .faq-a { color: var(--c-muted); font-size: .9375rem; line-height: 1.75; }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="site-logo">
+      <div class="logo-icon">宅</div>
+      好宅研究所<span class="accent">．</span>
+    </a>
+    <button class="nav-toggle" aria-label="開啟選單" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html">首頁</a>
+      <a href="articles.html">所有文章</a>
+      <a href="about.html">關於</a>
+      <a href="contact.html" class="nav-cta active">諮詢包租代管</a>
+    </nav>
+  </div>
+</header>
+
+<div class="article-header">
+  <div class="container--narrow">
+    <div class="article-cat">🏠 包租代管諮詢</div>
+    <h1>預約免費諮詢</h1>
+    <div class="article-meta">告訴我你的狀況，我們一起討論最適合的方式</div>
+  </div>
+</div>
+
+<main class="article-body">
+  <div class="container--narrow">
+
+    <p>不需要先做功課、不需要準備資料。只要把你的房子狀況簡單說一下，我來評估是否適合包租代管，以及大概的合作方式。</p>
+
+    <div class="contact-form-wrap">
+      <form onsubmit="handleContact(event)">
+        <div class="form-group">
+          <label>你的稱呼</label>
+          <input type="text" placeholder="王先生 / 陳小姐…" required>
+        </div>
+        <div class="form-group">
+          <label>聯絡方式</label>
+          <input type="text" placeholder="Email 或 LINE ID" required>
+          <p class="form-hint">我會在2個工作日內回覆你</p>
+        </div>
+        <div class="form-group">
+          <label>房屋所在縣市</label>
+          <select>
+            <option value="">請選擇…</option>
+            <option>台南市</option><option>高雄市</option><option>台中市</option>
+            <option>台北市</option><option>新北市</option><option>其他</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>房屋類型</label>
+          <select>
+            <option value="">請選擇…</option>
+            <option>套房（獨立衛浴）</option>
+            <option>一房一廳（含衛浴）</option>
+            <option>兩房以上</option>
+            <option>整棟出租（多間）</option>
+            <option>商業用途（辦公室/店面）</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>目前狀況</label>
+          <select>
+            <option value="">請選擇…</option>
+            <option>空屋，還沒租出去</option>
+            <option>有租客，但想委託人管理</option>
+            <option>還在裝修中，未來打算出租</option>
+            <option>只是想先了解看看</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>想說的話（選填）</label>
+          <textarea placeholder="有什麼特別狀況、疑問，或是你目前最頭痛的問題，都可以寫在這裡…"></textarea>
+        </div>
+        <button type="submit" class="btn btn--gold" style="width:100%; font-size:1rem; padding:.9rem;">送出諮詢申請</button>
+      </form>
+    </div>
+
+    <h2>常見問題</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">包租代管和一般仲介有什麼不同？</div>
+      <div class="faq-a">一般仲介協助找到租客後就結束了，後續管理是房東自己來。包租代管則是業者代為處理整個出租過程——找租客、簽約、收租、維修、退租——讓房東幾乎不需要介入日常管理。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">費用大概怎麼算？</div>
+      <div class="faq-a">市場行情通常是月租金的8%-15%，依服務範圍和房屋條件而定。諮詢後我會依你的情況提供明確的報價。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">房屋需要事先裝修嗎？</div>
+      <div class="faq-a">不一定。我會先了解現況，評估是否需要調整，有時候只需要做一些軟裝優化就能提升出租率。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">服務範圍在哪些地區？</div>
+      <div class="faq-a">目前主要服務台南市，其他縣市視情況討論。</div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="site-logo" style="margin-bottom:.8rem; display:inline-flex;">
+          <div class="logo-icon">宅</div>
+          好宅研究所<span class="accent">．</span>
+        </a>
+        <p>軟裝設計 × 包租代管 × 租管法規<br>幫你住得美、管得省心</p>
+      </div>
+      <div class="footer-col">
+        <h4>文章分類</h4>
+        <ul>
+          <li><a href="category-soft-decor.html">軟裝設計</a></li>
+          <li><a href="category-rental-mgmt.html">包租代管</a></li>
+          <li><a href="category-law.html">租管法規</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>關於本站</h4>
+        <ul>
+          <li><a href="about.html">關於好宅研究所</a></li>
+          <li><a href="contact.html">諮詢包租代管</a></li>
+          <li><a href="privacy.html">隱私權政策</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 好宅研究所 · 內容僅供參考，不構成法律或投資建議</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleNav() { document.getElementById('siteNav').classList.toggle('open'); }
+function handleContact(e) {
+  e.preventDefault();
+  alert('已收到你的諮詢申請！我們會在2個工作日內聯絡你。');
+}
+</script>
+</body>
+</html>
