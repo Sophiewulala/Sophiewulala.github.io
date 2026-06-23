@@ -23,8 +23,7 @@
       color: var(--c-text); transition: border-color .2s;
     }
     .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
-      outline: none; border-color: var(--c-gold);
-      background: var(--c-white);
+      outline: none; border-color: var(--c-gold); background: var(--c-white);
     }
     .form-group textarea { min-height: 120px; resize: vertical; }
     .form-hint { font-size: .8125rem; color: var(--c-muted); margin-top: .3rem; font-family: var(--f-title); }
@@ -69,46 +68,59 @@
 
     <div class="contact-form-wrap">
       <form action="https://formspree.io/f/xwvdppdq" method="POST">
+
         <div class="form-group">
-          <label>你的稱呼</label>
-          <input type="text" name="name" placeholder="王先生 / 陳小姐…" required>
+          <label for="f-name">你的稱呼</label>
+          <input id="f-name" type="text" name="name" placeholder="王先生 / 陳小姐…" required>
         </div>
+
         <div class="form-group">
-          <label>聯絡方式</label>
-          <input type="text" name="contact" placeholder="Email 或 LINE ID" required>
+          <label for="f-contact">聯絡方式</label>
+          <input id="f-contact" type="text" name="contact" placeholder="Email 或 LINE ID" required>
           <p class="form-hint">我會在2個工作日內回覆你</p>
         </div>
+
         <div class="form-group">
-          <label>房屋所在縣市</label>
-          <select name="city"><option>高雄市</option><option>台中市</option>
-            <option>台北市</option><option>新北市</option><option>其他</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>房屋類型</label>
-          <select name="house_type">
+          <label for="f-city">房屋所在縣市</label>
+          <select id="f-city" name="city">
             <option value="">請選擇…</option>
-            <option>套房（獨立衛浴）</option>
-            <option>一房一廳（含衛浴）</option>
-            <option>兩房以上</option>
-            <option>整棟出租（多間）</option>
-            <option>商業用途（辦公室/店面）</option>
+            <option value="台南市">台南市</option>
+            <option value="高雄市">高雄市</option>
+            <option value="台中市">台中市</option>
+            <option value="台北市">台北市</option>
+            <option value="新北市">新北市</option>
+            <option value="其他">其他</option>
           </select>
         </div>
+
         <div class="form-group">
-          <label>目前狀況</label>
-          <select name="current_status">
+          <label for="f-type">房屋類型</label>
+          <select id="f-type" name="house_type">
             <option value="">請選擇…</option>
-            <option>空屋，還沒租出去</option>
-            <option>有租客，但想委託人管理</option>
-            <option>還在裝修中，未來打算出租</option>
-            <option>只是想先了解看看</option>
+            <option value="套房">套房（獨立衛浴）</option>
+            <option value="一房一廳">一房一廳（含衛浴）</option>
+            <option value="兩房以上">兩房以上</option>
+            <option value="整棟">整棟出租（多間）</option>
+            <option value="商業">商業用途（辦公室/店面）</option>
           </select>
         </div>
+
         <div class="form-group">
-          <label>想說的話（選填）</label>
-          <textarea name="message" placeholder="有什麼特別狀況、疑問，或是你目前最頭痛的問題，都可以寫在這裡…"></textarea>
+          <label for="f-status">目前狀況</label>
+          <select id="f-status" name="current_status">
+            <option value="">請選擇…</option>
+            <option value="空屋">空屋，還沒租出去</option>
+            <option value="有租客">有租客，但想委託人管理</option>
+            <option value="裝修中">還在裝修中，未來打算出租</option>
+            <option value="了解">只是想先了解看看</option>
+          </select>
         </div>
+
+        <div class="form-group">
+          <label for="f-message">想說的話（選填）</label>
+          <textarea id="f-message" name="message" placeholder="有什麼特別狀況、疑問，或是你目前最頭痛的問題，都可以寫在這裡…"></textarea>
+        </div>
+
         <button type="submit" class="btn btn--gold" style="width:100%; font-size:1rem; padding:.9rem;">送出諮詢申請</button>
       </form>
     </div>
@@ -170,10 +182,6 @@
 
 <script>
 function toggleNav() { document.getElementById('siteNav').classList.toggle('open'); }
-function handleContact(e) {
-  e.preventDefault();
-  alert('已收到你的諮詢申請！我們會在2個工作日內聯絡你。');
-}
 </script>
 </body>
 </html>
