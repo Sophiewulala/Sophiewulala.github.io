@@ -1,0 +1,11 @@
+Google Search Console 驗證步驟：
+
+1. 前往 https://search.google.com/search-console
+2. 點「新增資源」→ 輸入 https://sophiewulala.github.io
+3. 選「HTML 標記」驗證方式
+4. 複製 <meta name="google-site-verification" content="XXXXXXX"> 這段程式碼
+5. 把這段貼給 Claude，我幫你加到 index.html 裡
+6. 上傳更新後的 index.html 到 GitHub
+7. 回到 Search Console 按「驗證」
+
+完成後 Google 就能開始追蹤你的網站流量。
